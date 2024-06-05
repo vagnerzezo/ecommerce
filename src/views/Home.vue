@@ -2,6 +2,7 @@
   <div class="home">
     <Fullbanner />
     <HomeShowcaseOne :prod="products" />
+    <BannerMeio />
     <HomeShowcaseTwo :prod="products" />
     <HomeShowcaseThree :prod="products" />
   </div>
@@ -9,6 +10,7 @@
 <script>
 import Fullbanner from '@/components/home/fullbanner.vue'
 import HomeShowcaseOne from '@/components/home/showcases/showcase-one.vue'
+import BannerMeio from '@/components/home/banner-meio.vue'
 import HomeShowcaseTwo from '@/components/home/showcases/showcase-two.vue'
 import HomeShowcaseThree from '@/components/home/showcases/showcase-three.vue'
 
@@ -17,8 +19,9 @@ export default {
   components: {
     Fullbanner,
     HomeShowcaseOne,
+    BannerMeio,
     HomeShowcaseTwo,
-    HomeShowcaseThree
+    HomeShowcaseThree,
   },
   computed: {
     products() {

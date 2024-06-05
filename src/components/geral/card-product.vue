@@ -1,3 +1,4 @@
+<!-- card-product.vue -->
 <template>
   <div class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
     <div class="imgProcuct">
@@ -8,42 +9,39 @@
         <h2>{{ product.title }}</h2>
         {{ product.rating.rate }}
       </div>
-
       <div class="priceProduct">
         <span>R$ {{ formatPrice(product.price) }}</span>
       </div>
     </div>
     <div class="buttons">
-      <button class="buy" @click="addProductToCart(product)">Add to Cart</button>
+      <button class="buy" @click="addToCart(product)">Add to Cart</button>
     </div>
   </div>
-
 </template>
+
 <script>
+import { mapActions } from 'vuex';
 
 export default {
-  data() {
-    return {
-      products: []
-    };
-  },
   props: {
     prod: {
-      type: Object,
+      type: Array,
       required: true
     }
   },
   methods: {
     formatPrice(value) {
-      let val = (value / 1).toFixed(2).replace('.', ',')
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      let val = (value / 1).toFixed(2).replace('.', ',');
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
-    async addProductToCart(product) {
-      await this.$store.dispatch('addProductToCart', product);
-    },
+    ...mapActions(['addProductToCart']),
+    addToCart(product) {
+      this.addProductToCart(product);
+    }
   }
 };
 </script>
+
 <style scoped>
 .cardProduct {
   margin-bottom: 30px;

@@ -9,6 +9,7 @@
       </div>
       <div class="col-3 col-md-2">
         <Icone />
+        <Cart />
       </div>
     </div>
   </div>
@@ -18,13 +19,15 @@
 import Logo from '@/components/header/logo.vue'
 import Icone from '@/components/header/icones.vue'
 import Category from '@/components/header/category.vue'
+import Cart from '@/components/Cart.vue'
 
 export default {
   name: 'Header',
   components: {
     Logo,
     Icone,
-    Category
+    Category,
+    Cart
   }
 }
 </script>
