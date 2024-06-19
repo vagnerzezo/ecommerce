@@ -4,23 +4,35 @@
       <h2>New Collection</h2>
     </div>
     <div class="row">
-      <swiper :slides-per-view="4" @swiper="onSwiper" @slideChange="onSlideChange">
-        <swiper-slide class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
+      <swiper
+        :breakpoints="{
+          0: { slidesPerView: 2 }, 
+          768: { slidesPerView: 4 }, 
+        }"
+        @swiper="onSwiper"
+        @slideChange="onSlideChange"
+      >
+        <swiper-slide
+          class="cardProduct col-md-3"
+          v-for="product in prod"
+          :key="product.id"
+        >
           <div class="imgProcuct">
-            <img :src="product.image" alt="">
+            <img :src="product.image" alt="" />
           </div>
           <div class="informantProduct">
             <div class="title">
               <h2>{{ product.title }}</h2>
               {{ product.rating.rate }}
             </div>
-
             <div class="priceProduct">
               <span>R$ {{ formatPrice(product.price) }}</span>
             </div>
           </div>
           <div class="buttons">
-            <button class="buy" @click="addProductToCart(product)">Add to Cart</button>
+            <button class="buy" @click="addProductToCart(product)">
+              Add to Cart
+            </button>
           </div>
         </swiper-slide>
       </swiper>
@@ -29,10 +41,10 @@
 </template>
 <script>
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
 export default {
   components: {
@@ -41,38 +53,37 @@ export default {
   },
   data() {
     return {
-      products: []
+      products: [],
     };
   },
   props: {
     prod: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     formatPrice(value) {
-      let val = (value / 1).toFixed(2).replace('.', ',')
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      let val = (value / 1).toFixed(2).replace(".", ",");
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     async addProductToCart(product) {
-      await this.$store.dispatch('addProductToCart', product);
+      await this.$store.dispatch("addProductToCart", product);
     },
-  }
+  },
 };
 </script>
 <style scoped>
 .showcase {
   margin: 50px auto;
 }
-.showcase .title{
+.showcase .title {
   margin: 50px 0;
 }
 .cardProduct {
   margin-bottom: 30px;
   padding: 15px;
 }
-
 
 .cardProduct .imgProcuct {
   height: 212px;

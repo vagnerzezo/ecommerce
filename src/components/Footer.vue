@@ -2,7 +2,7 @@
   <div id="footer" class="">
     <div class="content-footer wrapper">
       <div class="row">
-        <div class="history col-4 col-md-3">
+        <div class="history col-12 col-md-3">
           <Logo />
           <div class="content">
             <p>
@@ -12,7 +12,7 @@
           </div>
           <Social />
         </div>
-        <div class="contact col-4 col-md-3">
+        <div class="contact col-12 col-md-3">
           <div class="content">
             <h3>Contato</h3>
             <ul>
@@ -32,7 +32,7 @@
             </ul>
           </div>
         </div>
-        <div class="institutional col-4 col-md-3">
+        <div class="institutional col-12 col-md-3">
           <div class="content">
             <h3>Institutional</h3>
             <ul>
@@ -48,7 +48,7 @@
             </ul>
           </div>
         </div>
-        <div class="account col-4 col-md-3">
+        <div class="account col-12 col-md-3">
           <div class="content">
             <h3>Minha conta</h3>
             <ul>
@@ -117,5 +117,32 @@ li {
 }
 .copyright p {
   text-align: center;
+}
+@media (max-width: 1023px) {
+  h3 {
+    justify-content: center;
+    height: 50px;
+  }
+  p {
+    text-align: center;
+  }
+  li {
+    text-align: center;
+  }
+  #footer {
+    padding: 0 15px;
+  }
+  .content-footer .row .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto !important;
+  }
+  .history {
+    margin-bottom: 50px;
+  }
+  .copyright{
+    margin-top: 30px;
+  }
 }
 </style>
