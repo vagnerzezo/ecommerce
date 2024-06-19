@@ -5,8 +5,8 @@ const store = createStore({
   state: {
     products: [],
     cart: [],
-    categories: [], 
-    token: null 
+    categories: [],
+    token: null
   },
   mutations: {
     setProducts(state, products) {
@@ -62,7 +62,7 @@ const store = createStore({
         .then(res => res.json())
         .then(data => {
           commit('setToken', data.token);
-          return data; 
+          return data;
         });
     }
   },
@@ -70,7 +70,7 @@ const store = createStore({
     allProducts: state => state.products,
     cartProducts: state => state.cart,
     allCategories: state => state.categories,
-    isAuthenticated: state => !!state.token 
+    isAuthenticated: state => !!state.token
   }
 });
 

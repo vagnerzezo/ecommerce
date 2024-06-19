@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
    <div class="bannerMeio">
-         <img src='https://i.postimg.cc/75JSGJNH/bannermeio.png' border='0' alt='bannerMeio' />
+         <img src='https://i.postimg.cc/MH8n0Qkp/banner-Meio.png' border='0' alt='bannerMeio' />
    </div>
 </template>
 <script>

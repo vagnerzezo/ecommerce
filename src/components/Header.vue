@@ -5,29 +5,42 @@
         <Logo />
       </div>
       <div class="col-3 col-md-8">
-        <Category/>
+        <Category />
       </div>
       <div class="col-3 col-md-2">
-        <Icone />
-        <Cart />
+        <Icone @toggle-cart="toggleCart" />
+        <Cart v-if="showCart" @close-cart="closeCart" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '@/components/header/logo.vue'
-import Icone from '@/components/header/icones.vue'
-import Category from '@/components/header/category.vue'
-import Cart from '@/components/Cart.vue'
+import Logo from "@/components/header/logo.vue";
+import Icone from "@/components/header/icones.vue";
+import Category from "@/components/header/category.vue";
+import Cart from "@/components/Cart.vue";
 
 export default {
-  name: 'Header',
+  name: "Header",
   components: {
     Logo,
     Icone,
     Category,
-    Cart
-  }
-}
+    Cart,
+  },
+  data() {
+    return {
+      showCart: false,
+    };
+  },
+  methods: {
+    toggleCart() {
+      this.showCart = true;
+    },
+    closeCart() {
+      this.showCart = false;
+    },
+  },
+};
 </script>
