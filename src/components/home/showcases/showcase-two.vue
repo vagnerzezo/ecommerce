@@ -32,7 +32,7 @@
           </div>
           <div class="buttons">
             <button class="buy" @click="addProductToCart(product)">
-              Add to Cart
+              Adicionar ao carrinho
             </button>
           </div>
         </swiper-slide>

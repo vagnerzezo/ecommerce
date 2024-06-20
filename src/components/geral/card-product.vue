@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="buttons">
-      <button class="buy" @click="addToCart(product)">Add to Cart</button>
+      <button class="buy" @click="addToCart(product)">Adicionar ao carrinho</button>
     </div>
   </div>
 </template>

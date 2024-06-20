@@ -6,8 +6,8 @@
     <div class="row">
       <swiper
         :breakpoints="{
-          0: { slidesPerView: 2 }, 
-          768: { slidesPerView: 4 }, 
+          0: { slidesPerView: 2 },
+          768: { slidesPerView: 4 },
         }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
@@ -22,7 +22,11 @@
           </div>
           <div class="informantProduct">
             <div class="title">
-              <h2>{{ product.title }}</h2>
+              <router-link
+                :to="{ name: 'Product', params: { id: product.id } }"
+              >
+                <h2>{{ product.title }}</h2>
+              </router-link>
               {{ product.rating.rate }}
             </div>
             <div class="priceProduct">
@@ -31,7 +35,7 @@
           </div>
           <div class="buttons">
             <button class="buy" @click="addProductToCart(product)">
-              Add to Cart
+              Adicionar ao carrinho
             </button>
           </div>
         </swiper-slide>

@@ -1,7 +1,7 @@
 <template>
 
   <div id="logo">
-    <a href="">
+    <a href="#">
       <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 101" width="296" height="101">
         <title>ralau-svg</title>
         <g id="Layer">
