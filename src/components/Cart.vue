@@ -128,6 +128,7 @@ export default {
   top: 35px;
   left: -115px;
   width: 300px;
+  z-index: 99;
 }
 
 .empty {

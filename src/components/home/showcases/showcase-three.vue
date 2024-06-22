@@ -17,22 +17,26 @@
           v-for="product in prod"
           :key="product.id"
         >
-          <div class="imgProcuct">
-            <img :src="product.image" alt="" />
-          </div>
-          <div class="informantProduct">
-            <div class="title">
-              <h2>{{ product.title }}</h2>
-              {{ product.rating.rate }}
+          <router-link
+            :to="{ name: 'Product', params: { id: product.id } }"
+            class="product-link"
+          >
+            <div class="imgProcuct">
+              <img :src="product.image" alt="" />
             </div>
-
-            <div class="priceProduct">
-              <span>R$ {{ formatPrice(product.price) }}</span>
+            <div class="informantProduct">
+              <div class="title">
+                <h2>{{ product.title }}</h2>
+                {{ product.rating.rate }}
+              </div>
+              <div class="priceProduct">
+                <span>R$ {{ formatPrice(product.price) }}</span>
+              </div>
             </div>
-          </div>
+          </router-link>
           <div class="buttons">
             <button class="buy" @click="addProductToCart(product)">
-             Adicionar ao carrinho
+              Adicionar ao carrinho
             </button>
           </div>
         </swiper-slide>
@@ -40,6 +44,7 @@
     </div>
   </div>
 </template>
+
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -59,7 +64,7 @@ export default {
   },
   props: {
     prod: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },
@@ -74,15 +79,14 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .showcase {
   margin: 50px auto;
 }
-
 .showcase .title {
   margin: 50px 0;
 }
-
 .cardProduct {
   margin-bottom: 30px;
   padding: 15px;
@@ -130,5 +134,11 @@ export default {
 
 .cardProduct .priceProduct {
   height: 30px;
+}
+
+.product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 </style>

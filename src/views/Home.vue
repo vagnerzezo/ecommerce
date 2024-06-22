@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <Fullbanner />
     <HomeShowcaseOne :prod="products" class="vitrine" />
     <BannerMeio />

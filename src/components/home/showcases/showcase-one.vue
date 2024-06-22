@@ -17,37 +17,35 @@
           v-for="product in prod"
           :key="product.id"
         >
-          <div class="imgProcuct">
-            <img :src="product.image" alt="" />
-          </div>
-          <div class="informantProduct">
-            <div class="title">
-              <router-link
-                :to="{ name: 'Product', params: { id: product.id } }"
-              >
+          <router-link
+            :to="{ name: 'Product', params: { id: product.id } }"
+            class="product-link"
+          >
+            <div class="imgProcuct">
+              <img :src="product.image" alt="" />
+            </div>
+            <div class="informantProduct">
+              <div class="title">
                 <h2>{{ product.title }}</h2>
-              </router-link>
-              {{ product.rating.rate }}
+                {{ product.rating.rate }}
+              </div>
+              <div class="priceProduct">
+                <span>R$ {{ formatPrice(product.price) }}</span>
+              </div>
             </div>
-            <div class="priceProduct">
-              <span>R$ {{ formatPrice(product.price) }}</span>
+
+            <div class="buttons">
+              <button class="buy">Adicionar ao carrinho</button>
             </div>
-          </div>
-          <div class="buttons">
-            <button class="buy" @click="addProductToCart(product)">
-              Adicionar ao carrinho
-            </button>
-          </div>
+          </router-link>
         </swiper-slide>
       </swiper>
     </div>
   </div>
 </template>
-<script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
 
-// Import Swiper styles
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 export default {
@@ -62,7 +60,7 @@ export default {
   },
   props: {
     prod: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },
@@ -71,12 +69,10 @@ export default {
       let val = (value / 1).toFixed(2).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
-    async addProductToCart(product) {
-      await this.$store.dispatch("addProductToCart", product);
-    },
   },
 };
 </script>
+
 <style scoped>
 .showcase {
   margin: 50px auto;
@@ -131,5 +127,11 @@ export default {
 
 .cardProduct .priceProduct {
   height: 30px;
+}
+
+.product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 </style>

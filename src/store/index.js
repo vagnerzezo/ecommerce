@@ -6,7 +6,8 @@ const store = createStore({
     products: [],
     cart: [],
     categories: [],
-    token: null
+    token: null,
+    showCart: false // Adiciona showCart no estado
   },
   mutations: {
     setProducts(state, products) {
@@ -26,6 +27,9 @@ const store = createStore({
     },
     setToken(state, token) {
       state.token = token;
+    },
+    setShowCart(state, show) { // Nova mutação para showCart
+      state.showCart = show;
     }
   },
   actions: {
@@ -37,6 +41,12 @@ const store = createStore({
     },
     addProductToCart({ commit }, product) {
       commit('addToCart', product);
+      setTimeout(() => {
+        commit('setShowCart', true);
+      }, 1000);
+      setTimeout(() => {
+        commit('setShowCart', false);
+      }, 3000);
     },
     removeProductFromCart({ commit }, productId) {
       commit('removeFromCart', productId);
@@ -45,10 +55,15 @@ const store = createStore({
       commit('clearCart');
     },
     fetchCategories({ commit }) {
-      fetch('https://fakestoreapi.com/products/categories')
-        .then(res => res.json())
-        .then(categories => {
-          commit('setCategories', categories);
+      axios.get('https://fakestoreapi.com/products/categories')
+        .then(response => {
+          commit('setCategories', response.data);
+        });
+    },
+    fetchProductC({ commit }, category) {
+      axios.get(`https://fakestoreapi.com/products/category/${category}`)
+        .then(response => {
+          commit('setProducts', response.data);
         });
     },
     userLogin({ commit }) {
@@ -70,7 +85,8 @@ const store = createStore({
     allProducts: state => state.products,
     cartProducts: state => state.cart,
     allCategories: state => state.categories,
-    isAuthenticated: state => !!state.token
+    isAuthenticated: state => !!state.token,
+    showCart: state => state.showCart // Getter para showCart
   }
 });
 
