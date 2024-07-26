@@ -14,6 +14,9 @@ export default {
   computed: {
     categories() {
       return this.$store.getters.allCategories; // Acessando o getter 'allCategories' do Vuex
+    },
+    device() {
+      return this.$store.state.screenWidth < 1024 ? 'mobile' : 'desktop';
     }
   },
   mounted() {

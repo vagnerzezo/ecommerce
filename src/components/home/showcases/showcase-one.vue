@@ -4,30 +4,19 @@
       <h2>New Collection</h2>
     </div>
     <div class="row">
-      <swiper
-        :breakpoints="{
+      <swiper :breakpoints="{
           0: { slidesPerView: 2 },
           768: { slidesPerView: 4 },
-        }"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
-      >
-        <swiper-slide
-          class="cardProduct col-md-3"
-          v-for="product in prod"
-          :key="product.id"
-        >
-          <router-link
-            :to="{ name: 'Product', params: { id: product.id } }"
-            class="product-link"
-          >
+        }" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper-slide class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
+          <router-link :to="{ name: 'Product', params: { id: product.id } }" class="product-link">
             <div class="imgProcuct">
               <img :src="product.image" alt="" />
             </div>
             <div class="informantProduct">
               <div class="title">
                 <h2>{{ product.title }}</h2>
-                {{ product.rating.rate }}
+                {{ product.rating?.rate }} ({{ product.rating?.count }} reviews)
               </div>
               <div class="priceProduct">
                 <span>R$ {{ formatPrice(product.price) }}</span>

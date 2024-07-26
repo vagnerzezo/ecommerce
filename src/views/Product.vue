@@ -139,7 +139,7 @@ export default {
 
 @media (max-width: 1024px) {
   .image .productImg {
-    height: 500px;
+    height: 430px;
   }
 
   h1 {

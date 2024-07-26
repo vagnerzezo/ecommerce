@@ -6,5 +6,14 @@ import './plugins/axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css';
 
+// Importa o mixin
+import screenMixin from './mixins/screenMixin';
 
-createApp(App).use(router).use(store).mount('#ecommerce');
+// Cria a aplicação Vue
+const app = createApp(App);
+
+// Usa o mixin globalmente
+app.mixin(screenMixin);
+
+// Usa o router e o store, e monta a aplicação
+app.use(router).use(store).mount('#ecommerce');

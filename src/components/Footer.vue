@@ -69,7 +69,7 @@
         <div class="copy col-md-12">
           <p>
             ©Copyright 2024 Todos os direitos reservados. RALAU CLOSET DE ROUPAS
-            E ACESSORIOS LTDA | CNPJ 00.000.000/0001-00-
+            E ACESSORIOS LTDA | CNPJ 00.000.000/0001-00
           </p>
         </div>
       </div>

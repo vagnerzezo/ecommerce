@@ -7,9 +7,13 @@ const store = createStore({
     cart: [],
     categories: [],
     token: null,
-    showCart: false // Adiciona showCart no estado
+    screenWidth: null,
+    showCart: false
   },
   mutations: {
+    setScreenWidth(localState, payload) {
+      localState.screenWidth = payload;
+    },
     setProducts(state, products) {
       state.products = products;
     },
@@ -28,7 +32,7 @@ const store = createStore({
     setToken(state, token) {
       state.token = token;
     },
-    setShowCart(state, show) { // Nova mutação para showCart
+    setShowCart(state, show) {
       state.showCart = show;
     }
   },
@@ -86,7 +90,7 @@ const store = createStore({
     cartProducts: state => state.cart,
     allCategories: state => state.categories,
     isAuthenticated: state => !!state.token,
-    showCart: state => state.showCart // Getter para showCart
+    showCart: state => state.showCart
   }
 });
 
