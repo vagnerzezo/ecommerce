@@ -84,6 +84,7 @@ export default {
   .row {
     width: 100%;
     justify-content: space-evenly;
+    margin: 0;
   }
 }
 </style>
