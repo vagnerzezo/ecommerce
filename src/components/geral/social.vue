@@ -2,7 +2,7 @@
   <div id="social">
     <ul>
       <li>
-        <a href="https://www.instagram.com/vagnerxz/">
+        <a href="https://www.instagram.com/vagnerxz/" aria-label="Icone do instagram">
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.109619" width="28" height="28" rx="4" fill="#1F1F1F" />
             <path
@@ -12,7 +12,7 @@
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/vagnerxz/">
+        <a href="https://www.instagram.com/vagnerxz/" aria-label="Icone do facebook">
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.109619" width="28" height="28" rx="4" fill="#1F1F1F" />
             <path
@@ -22,7 +22,7 @@
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/vagnerxz/">
+        <a href="https://www.instagram.com/vagnerxz/" aria-label="Icone do whatsapp">
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.109619" width="28" height="28" rx="4" fill="#1F1F1F" />
             <path
