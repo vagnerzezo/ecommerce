@@ -71,10 +71,19 @@ export default {
     order: 2;
     display: flex;
     justify-content: center;
+    height: 90px;
   }
 
   .header-icone {
     order: 3;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .row {
+    width: 100%;
+    justify-content: space-evenly;
   }
 }
 </style>

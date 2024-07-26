@@ -62,4 +62,26 @@ button {
   background-color: transparent;
   border: none;
 }
+
+.header-actions {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.row>div {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 0;
+}
 </style>
