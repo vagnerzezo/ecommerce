@@ -13,7 +13,7 @@
         <span>R$ {{ formatPrice(product.price) }}</span>
       </div>
     </div>
-    <div class="buttons">
+    <div class="buttons" aria-label="Adicionar ao carrinho">
       <button class="buy" @click="addToCart(product)">Adicionar ao carrinho</button>
     </div>
   </div>

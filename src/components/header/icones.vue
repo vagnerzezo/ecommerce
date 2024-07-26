@@ -27,7 +27,7 @@
       </div>
       <div class="col-3 col-md-4">
         <div class="cart">
-          <button @click="openCart()">
+          <button @click="openCart()" aria-label="Icone carrinho">
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="#3a3d46" id="Layer_1" data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22">
               <path class="cls-1"

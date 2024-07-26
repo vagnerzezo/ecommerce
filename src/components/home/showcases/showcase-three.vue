@@ -23,7 +23,7 @@
               </div>
             </div>
           </router-link>
-          <div class="buttons">
+          <div class="buttons" aria-label="Adicionar ao carrinho">
             <button class="buy" @click="addProductToCart(product)">
               Adicionar ao carrinho
             </button>

@@ -1,8 +1,9 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
    <div class="fullbanner">
-         <!-- <img src='https://i.postimg.cc/2jK6ghF4/fullbanner02.png' border='0' alt='fullbanner02' /> -->
-         <img src='https://i.postimg.cc/tRwqBypk/fullbanner.png' border='0' alt='fullbanner' />
+      <!-- <img src='https://i.postimg.cc/2jK6ghF4/fullbanner02.png' border='0' alt='fullbanner02' /> -->
+      <img src='https://i.postimg.cc/tRwqBypk/fullbanner.png' width="100" height="auto" border='0' alt='fullbanner'
+         loading="lazy" />
    </div>
 </template>
 <script>

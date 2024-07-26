@@ -2,7 +2,7 @@
   <div id="category">
     <ul class="categories">
       <li v-for="category in categories" :key="category">
-        <a href=""> {{ category }}</a>
+        <a :href="category"> {{ category }}</a>
       </li>
     </ul>
   </div>

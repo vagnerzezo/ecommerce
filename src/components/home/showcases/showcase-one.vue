@@ -11,7 +11,7 @@
         <swiper-slide class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
           <router-link :to="{ name: 'Product', params: { id: product.id } }" class="product-link">
             <div class="imgProcuct">
-              <img :src="product.image" alt="" />
+              <img :src="product.image" :alt="product.title" loading="lazy" />
             </div>
             <div class="informantProduct">
               <div class="title">
@@ -23,7 +23,7 @@
               </div>
             </div>
 
-            <div class="buttons">
+            <div class="buttons" aria-label="Adicionar ao carrinho">
               <button class="buy">Adicionar ao carrinho</button>
             </div>
           </router-link>

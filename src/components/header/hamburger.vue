@@ -1,6 +1,6 @@
 <template>
   <div id="icone-hamburger">
-    <button>
+    <button aria-label="Menu hamburger">
       <svg width="64px" height="64px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

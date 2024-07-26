@@ -17,13 +17,13 @@
             <h3>Contato</h3>
             <ul>
               <li>
-                <a href="">Telefone: (11) 3333-3333</a>
+                <a href="tel:+1133333333">Telefone: (11) 3333-3333</a>
               </li>
               <li>
-                <a href="">WhatsApp: (11) 9999-9999</a>
+                <a href="tel:+1133333333">WhatsApp: (11) 9999-9999</a>
               </li>
               <li>
-                <a href="">E-mail: ralau@closet.com</a>
+                <a href="mailto:ralau@closet.com<">E-mail: ralau@closet.com</a>
               </li>
               <li>
                 <span>HORÁRIO DE ATENDIMENTO</span>
@@ -37,13 +37,13 @@
             <h3>Institutional</h3>
             <ul>
               <li>
-                <a href="">Quem somos</a>
+                <a href="/Quem-somos">Quem somos</a>
               </li>
               <li>
-                <a href="">Seja um franqueado</a>
+                <a href="/seja-franqueado">Seja um franqueado</a>
               </li>
               <li>
-                <a href="">Política de privacidade</a>
+                <a href="/politica-privacidade">Política de privacidade</a>
               </li>
             </ul>
           </div>
@@ -53,13 +53,13 @@
             <h3>Minha conta</h3>
             <ul>
               <li>
-                <a href="">Minha conta</a>
+                <a href="/minha-conta">Minha conta</a>
               </li>
               <li>
-                <a href="">Pedidos</a>
+                <a href="/pedido">Pedidos</a>
               </li>
               <li>
-                <a href="">Endereço</a>
+                <a href="/endereco">Endereço</a>
               </li>
             </ul>
           </div>

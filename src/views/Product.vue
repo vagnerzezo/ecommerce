@@ -16,17 +16,13 @@
         </div>
         <div class="price">${{ product.price }}</div>
         <div class="description">{{ product.description }}</div>
-        <button class="buy" @click="addProductToCart(product)">
+        <button class="buy" @click="addProductToCart(product)" aria-label="Adicionar ao carrinho">
           Adicionar ao carrinho
         </button>
       </div>
       <div class="banners">
         <div v-if="product.category" class="imageText">
-          <img
-            src="https://i.postimg.cc/zXhfKNFd/man01.png"
-            border="0"
-            alt="man01"
-          />
+          <img src="https://i.postimg.cc/zXhfKNFd/man01.png" border="0" alt="man01" loading="lazy" />
           <div class="text">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
