@@ -1,21 +1,7 @@
-```markdown
-# E-commerce Vue.js 3
+## E-commerce Vue.js 3
 
 Este projeto é uma loja de e-commerce construída utilizando Vue.js 3. Ele consome a API da [Fake Store API](https://fakestoreapi.com/) para obter todas as informações dos produtos, incluindo detalhes, preços e categorias.
 
-## Índice
-
-- [Descrição do Projeto](#descrição-do-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Scripts Disponíveis](#scripts-disponíveis)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Contato](#contato)
 
 ## Descrição do Projeto
 
@@ -30,7 +16,7 @@ Este projeto tem como objetivo fornecer uma plataforma de e-commerce onde os usu
 - Filtro de produtos por categoria
 - Interface responsiva
 
-## Instalação
+## Instalação  
 
 Para clonar o repositório, você pode usar o GitHub CLI ou o HTTPS.
 
@@ -127,25 +113,10 @@ ecommerce/
 - [Bootstrap](https://getbootstrap.com/): Framework CSS para desenvolvimento de front-end.
 - [Swiper](https://swiperjs.com/): Biblioteca de sliders.
 
-## Contribuição
-
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
-
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Faça push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Contato
 
-Vagner Xavier Chaves - [vagnerzezo@example.com](mailto:vagnerzezo@example.com)
+Vagner Xavier Chaves - [vagnerzezo@live.com](mailto:vagnerzezo@live.com)
 
 Projeto Link: [https://github.com/vagnerzezo/ecommerce](https://github.com/vagnerzezo/ecommerce)
 ```
-
-Basta copiar e colar o conteúdo acima no arquivo README.md do seu projeto. Certifique-se de substituir qualquer informação específica, como o email de contato, conforme necessário.
