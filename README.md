@@ -114,6 +114,6 @@ ecommerce/
 
 ## Contato 📩
 
-Vagner Xavier Chaves - [vagnerzezo@live.com](mailto:vagnerzezo@live.com)
+Vagner Xavier - [vagnerzezo@live.com](mailto:vagnerzezo@live.com)
 
 Projeto Link: [https://github.com/vagnerzezo/ecommerce](https://github.com/vagnerzezo/ecommerce)
