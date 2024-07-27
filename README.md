@@ -2,6 +2,7 @@
 
 Este projeto é uma loja de e-commerce construída utilizando Vue.js 3. Ele consome a API da [Fake Store API](https://fakestoreapi.com/) para obter todas as informações dos produtos, incluindo detalhes, preços e categorias.
 
+Link: https://ralau-closet.vercel.app/
 
 ## Descrição do Projeto 📔
 
