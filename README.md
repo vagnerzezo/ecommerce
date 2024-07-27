@@ -1,32 +1,30 @@
-## E-commerce Vue.js 3
+## E-commerce Vue.js 3 🛍️
 
 Este projeto é uma loja de e-commerce construída utilizando Vue.js 3. Ele consome a API da [Fake Store API](https://fakestoreapi.com/) para obter todas as informações dos produtos, incluindo detalhes, preços e categorias.
 
 
-## Descrição do Projeto
+## Descrição do Projeto 📔
 
 Este projeto tem como objetivo fornecer uma plataforma de e-commerce onde os usuários podem visualizar produtos, adicionar ao carrinho e fazer compras simuladas. O projeto utiliza a Fake Store API para obter dados de produtos em tempo real.
 
-## Funcionalidades
+## Funcionalidades ⚙️
 
 - Listagem de produtos
 - Visualização de detalhes do produto
 - Adição e remoção de produtos no carrinho de compras
-- Simulação de checkout
-- Filtro de produtos por categoria
 - Interface responsiva
 
-## Instalação  
+## Instalação 🔩
 
 Para clonar o repositório, você pode usar o GitHub CLI ou o HTTPS.
 
-### GitHub CLI
+### GitHub CLI 🖥️
 
 ```bash
 gh repo clone vagnerzezo/ecommerce
 ```
 
-### HTTPS
+### HTTPS 🖥️
 
 ```bash
 git clone https://github.com/vagnerzezo/ecommerce.git
@@ -39,11 +37,11 @@ cd ecommerce
 npm install
 ```
 
-## Configuração
+## Configuração ⚙️
 
 Não é necessária configuração adicional para executar este projeto. As configurações de API estão prontas para uso.
 
-## Uso
+## Uso 🔩
 
 Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 
@@ -67,7 +65,7 @@ Para verificar e corrigir problemas de linting:
 npm run lint
 ```
 
-## Scripts Disponíveis
+## Scripts Disponíveis 🖥️
 
 No diretório do projeto, você pode executar:
 
@@ -75,7 +73,7 @@ No diretório do projeto, você pode executar:
 - `npm run build`: Compila o aplicativo para produção na pasta `dist`.
 - `npm run lint`: Verifica e corrige problemas de linting.
 
-## Estrutura do Projeto
+## Estrutura do Projeto 📓
 
 ```plaintext
 ecommerce/
@@ -105,7 +103,7 @@ ecommerce/
   - **App.vue**: Componente raiz do aplicativo.
   - **main.js**: Arquivo de entrada do aplicativo.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas ⚙️
 
 - [Vue.js 3](https://vuejs.org/): Framework JavaScript para construir interfaces de usuário.
 - [Vuex](https://vuex.vuejs.org/): Gerenciamento de estado para Vue.js.
@@ -114,9 +112,8 @@ ecommerce/
 - [Swiper](https://swiperjs.com/): Biblioteca de sliders.
 
 
-## Contato
+## Contato 📩
 
 Vagner Xavier Chaves - [vagnerzezo@live.com](mailto:vagnerzezo@live.com)
 
 Projeto Link: [https://github.com/vagnerzezo/ecommerce](https://github.com/vagnerzezo/ecommerce)
-```
