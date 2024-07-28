@@ -47,9 +47,15 @@ const store = createStore({
       commit('addToCart', product);
       setTimeout(() => {
         commit('setShowCart', true);
+        const elemento = document.querySelector('#ecommerce');
+        elemento.classList.add('overlay');
+        document.body.style.overflow = 'hidden';
       }, 1000);
       setTimeout(() => {
         commit('setShowCart', false);
+        const elemento = document.querySelector('#ecommerce');
+        elemento.classList.remove('overlay');
+        document.body.style.overflow = '';
       }, 3000);
     },
     removeProductFromCart({ commit }, productId) {

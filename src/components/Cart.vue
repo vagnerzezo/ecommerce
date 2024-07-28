@@ -72,6 +72,7 @@ export default {
     },
     closeCart() {
       this.$emit("close-cart");
+      document.body.style.overflow = '';
     },
   },
 };
@@ -150,5 +151,11 @@ button {
 
 .continuar {
   border: 1px solid var(--color2) !important;
+}
+
+@media (max-width: 1023px) {
+  #cart-product {
+    left: -170px;
+  }
 }
 </style>

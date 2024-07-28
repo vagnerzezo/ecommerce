@@ -45,9 +45,15 @@ export default {
   methods: {
     toggleCart() {
       this.$store.commit("setShowCart", true);
+      const elemento = document.querySelector('#ecommerce');
+      elemento.classList.add('overlay');
+      document.body.style.overflow = 'hidden';
     },
     closeCart() {
       this.$store.commit("setShowCart", false);
+      const elemento = document.querySelector('#ecommerce');
+      elemento.classList.remove('overlay');
+      document.body.style.overflow = '';
     },
   },
 };
