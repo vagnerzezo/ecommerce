@@ -1,18 +1,30 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
    <div class="fullbanner">
-      <!-- <img src='https://i.postimg.cc/2jK6ghF4/fullbanner02.png' border='0' alt='fullbanner02' /> -->
-      <img src='@/assets/img/banner/fullbanner.webp' width="100" height="auto" border='0' alt='fullbanner' loading="lazy" />
+      <div v-if="isMobile">
+         <img srcset="
+          @/assets/img/banner/fullbanner-mob.webp 600w,
+        " sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
+            src="@/assets/img/banner/fullbanner-mob.webp" alt="fullbanner" loading="lazy" />
+      </div>
+      <div v-else>
+         <img srcset="
+          @/assets/img/banner/fullbanner.webp 800w
+        " sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1900px"
+            src="@/assets/img/banner/fullbanner.webp" alt="fullbanner" loading="lazy" />
+      </div>
    </div>
 </template>
-<script>
-// import VueSlickCarousel from 'vue-slick-carousel'
-// import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 
+<script>
 export default {
    name: 'Fullbanner',
-   components: {
-      // VueSlickCarousel
-   },
-}
+};
 </script>
+
+<style scoped>
+.fullbanner img {
+   width: 100%;
+   height: auto;
+}
+</style>

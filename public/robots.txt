@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ralau-closet.vercel.app/sitemap.xml
