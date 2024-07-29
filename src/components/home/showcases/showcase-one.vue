@@ -11,7 +11,8 @@
         <swiper-slide class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
           <router-link :to="{ name: 'Product', params: { id: product.id } }" class="product-link">
             <div class="imgProcuct">
-              <img :src="product.image" :alt="product.title" loading="lazy" />
+              <img :src="product.image" :alt="product.title" loading="lazy" width="663" height="auto"
+                sizes="(max-width: 663px) 663px" :srcset="product.image" />
             </div>
             <div class="informantProduct">
               <div class="title">
