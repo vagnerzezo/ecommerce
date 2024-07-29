@@ -16,8 +16,9 @@
         </div>
         <div class="price">${{ product.price }}</div>
         <div class="description">{{ product.description }}</div>
-        <button class="buy" @click="addProductToCart(product)" aria-label="Adicionar ao carrinho">
-          Adicionar ao carrinho
+        <button class="buy" @click="handleAddToCart" :disabled="buttonState !== 'Adicionar ao carrinho'"
+          aria-label="Adicionar ao carrinho">
+          {{ buttonState }}
         </button>
       </div>
       <div class="banners">
@@ -61,6 +62,7 @@ export default {
   data() {
     return {
       product: {},
+      buttonState: "Adicionar ao carrinho",
     };
   },
   computed: {
@@ -90,12 +92,23 @@ export default {
       let val = (value / 1).toFixed(2).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
+    async handleAddToCart() {
+      this.buttonState = "Adicionando...";
+      setTimeout(async () => {
+        await this.addProductToCart(this.product);
+        this.buttonState = "Adicionado ao carrinho";
+        setTimeout(() => {
+          this.buttonState = "Adicionar ao carrinho";
+        }, 6000);
+      }, 6000);
+    },
     async addProductToCart(product) {
       await this.$store.dispatch("addProductToCart", product);
     },
   },
 };
 </script>
+
 <style scoped>
 .page-product {
   padding: 0 15px;

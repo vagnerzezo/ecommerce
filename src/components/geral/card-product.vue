@@ -14,7 +14,10 @@
       </div>
     </div>
     <div class="buttons" aria-label="Adicionar ao carrinho">
-      <button class="buy" @click="addToCart(product)">Adicionar ao carrinho</button>
+      <button class="buy" @click="handleAddToCart(product)"
+        :disabled="buttonStates[product.id] !== 'Adicionar ao carrinho'">
+        {{ buttonStates[product.id] || 'Adicionar ao carrinho' }}
+      </button>
     </div>
   </div>
 </template>
@@ -29,14 +32,26 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      buttonStates: {}
+    };
+  },
   methods: {
     formatPrice(value) {
       let val = (value / 1).toFixed(2).replace('.', ',');
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     ...mapActions(['addProductToCart']),
-    addToCart(product) {
-      this.addProductToCart(product);
+    handleAddToCart(product) {
+      this.$set(this.buttonStates, product.id, 'Adicionando...');
+      setTimeout(async () => {
+        await this.addProductToCart(product);
+        this.$set(this.buttonStates, product.id, 'Adicionado ao carrinho');
+        setTimeout(() => {
+          this.$set(this.buttonStates, product.id, 'Adicionar ao carrinho');
+        }, 5000);
+      }, 5000);
     }
   }
 };
