@@ -132,4 +132,14 @@ export default {
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 1023px) {
+  .showcase {
+    margin: 15px auto;
+  }
+
+  .showcase .title {
+    margin: 25px 0;
+  }
+}
 </style>

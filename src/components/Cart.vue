@@ -5,16 +5,24 @@
       <div class="cart-topo">
         <span>Carrinho</span>
         <button @click="closeCart()" aria-label="Carrinho">
-          <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-            data-v-3e6ad914="" data-v-eb5ad508="">
-            <path
-              d="M10.9167 21.0554C16.4167 21.0724 20.9306 16.5863 20.9476 11.0863C20.9645 5.58638 16.4784 1.07251 10.9785 1.05553C5.47849 1.03855 0.964624 5.52464 0.947646 11.0246C0.930668 16.5246 5.41676 21.0385 10.9167 21.0554Z"
-              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-v-3e6ad914=""
-              data-v-eb5ad508=""></path>
-            <path d="M8.10899 13.8768L13.7864 8.23427" stroke="black" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" data-v-3e6ad914="" data-v-eb5ad508=""></path>
-            <path d="M13.769 13.8942L8.12646 8.2168" stroke="black" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" data-v-3e6ad914="" data-v-eb5ad508=""></path>
+          <svg width="30px" height="25px" viewBox="-6.4 -6.4 76.80 76.80" xmlns="http://www.w3.org/2000/svg" fill="none"
+            stroke="#000000" stroke-width="1.6">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+              stroke-width="0.128" />
+
+            <g id="SVGRepo_iconCarrier">
+
+              <line x1="20" y1="20" x2="44" y2="44" />
+
+              <line x1="44" y1="20" x2="20" y2="44" />
+
+              <rect x="8" y="8" width="48" height="48" />
+
+            </g>
+
           </svg>
         </button>
       </div>

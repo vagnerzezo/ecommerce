@@ -1,6 +1,6 @@
 <template>
   <div id="icone-hamburger">
-    <button aria-label="Menu hamburger">
+    <button aria-label="Menu hamburger" @click=" toggleMenu()">
       <svg width="64px" height="64px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -19,12 +19,47 @@
     </button>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      menuShow: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.$emit('openMenu');
+    },
+  },
+};
+</script>
+
+
 <style scoped>
-button{
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.menu-mobile {
+  position: absolute;
+}
+
+button {
   border: none;
   background: transparent;
 }
-svg{
+
+svg {
   width: 32px;
   height: 32px;
 }

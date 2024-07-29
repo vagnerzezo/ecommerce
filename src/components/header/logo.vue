@@ -1,5 +1,4 @@
 <template>
-
   <div id="logo">
     <a href="https://ralau-closet.vercel.app/">
       <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 101" width="296" height="101">
@@ -103,5 +102,11 @@ export default {
   display: flex;
   width: 160px;
   height: auto;
+}
+
+@media (max-width: 1023px) {
+  #logo a {
+    height: 90px;
+  }
 }
 </style>
