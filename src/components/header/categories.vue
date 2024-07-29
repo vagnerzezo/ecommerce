@@ -2,7 +2,7 @@
   <div id="category">
     <ul class="categories">
       <li v-for="category in categories" :key="category">
-        <a :href="category"> {{ category }}</a>
+        <router-link :to="`/category/${category}`">{{ category }}</router-link>
       </li>
     </ul>
   </div>
@@ -10,24 +10,24 @@
 <script>
 
 export default {
-  name: 'categoria',
-  computed: {
-    categories() {
-      return this.$store.getters.allCategories; // Acessando o getter 'allCategories' do Vuex
-    },
-    device() {
-      return this.$store.state.screenWidth < 1024 ? 'mobile' : 'desktop';
-    }
+  data() {
+    return {
+      categories: []
+    };
   },
-  mounted() {
-    this.fetchCategories(); // Chama a ação 'fetchCategories' quando o componente é montado
+  created() {
+    this.fetchCategories();
   },
   methods: {
     fetchCategories() {
-      this.$store.dispatch('fetchCategories'); // Dispara a ação 'fetchCategories' para buscar as categorias
+      fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(json => {
+          this.categories = json;
+        });
     }
   }
-}
+};
 </script>
 <style lang="css" scoped>
 .categories {

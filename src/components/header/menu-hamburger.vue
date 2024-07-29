@@ -5,7 +5,7 @@
         <div class="logo">
           <Logo />
         </div>
-        <button aria-label="Fecha menu" @click=" closeMenu()" >
+        <button aria-label="Fecha menu" @click=" closeMenu()">
           <svg width="40px" height="40px" viewBox="-6.4 -6.4 76.80 76.80" xmlns="http://www.w3.org/2000/svg" fill="none"
             stroke="#000000" stroke-width="1.6">
 
@@ -28,8 +28,8 @@
         </button>
       </div>
       <ul class="categories-mobile">
-        <li v-for="category in categories" :key="category">
-          <a :href="category"> {{ category }}</a>
+        <li @click=" closeMenu()" v-for="category in categories" :key="category">
+          <router-link :to="`/category/${category}`">{{ category }}</router-link>
         </li>
       </ul>
     </div>
@@ -53,24 +53,33 @@ export default {
   components: {
     Logo
   },
-  computed: {
-    categories() {
-      return this.$store.getters.allCategories; // Acessando o getter 'allCategories' do Vuex
-    },
-    device() {
-      return this.$store.state.screenWidth < 1024 ? 'mobile' : 'desktop';
-    }
+  data() {
+    return {
+      categories: []
+    };
+  },
+  created() {
+    this.fetchCategories();
   },
   mounted() {
     this.fetchCategories(); // Chama a ação 'fetchCategories' quando o componente é montado
   },
   methods: {
     fetchCategories() {
-      this.$store.dispatch('fetchCategories'); // Dispara a ação 'fetchCategories' para buscar as categorias
+      fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(json => {
+          this.categories = json;
+        });
     },
     closeMenu() {
       this.$emit('closeMenu');
     },
+    menuClose() {
+      setTimeout(() => {
+        this.$emit('closeMenu');
+      }, 2000);
+    }
   }
 }
 </script>
@@ -122,7 +131,6 @@ export default {
 .categories-mobile li a {
   font-size: 16px;
 }
-button{
-  
-}
+
+button {}
 </style>

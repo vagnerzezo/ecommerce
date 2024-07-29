@@ -70,7 +70,7 @@ const store = createStore({
           commit('setCategories', response.data);
         });
     },
-    fetchProductC({ commit }, category) {
+    fetchProductsByCategory({ commit }, category) {
       axios.get(`https://fakestoreapi.com/products/category/${category}`)
         .then(response => {
           commit('setProducts', response.data);
