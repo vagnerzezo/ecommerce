@@ -18,6 +18,10 @@ export default {
 </script>
 
 <style scoped>
+.bannerMeio {
+   min-height: 320px;
+}
+
 .bannerMeio img {
    width: 100%;
    height: auto;

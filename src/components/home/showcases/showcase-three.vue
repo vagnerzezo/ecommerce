@@ -5,9 +5,9 @@
     </div>
     <div class="row">
       <swiper :breakpoints="{
-          0: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-        }" @swiper="onSwiper" @slideChange="onSlideChange">
+        0: { slidesPerView: 2 },
+        768: { slidesPerView: 4 },
+      }" @swiper="onSwiper" @slideChange="onSlideChange">
         <swiper-slide class="cardProduct col-md-3" v-for="product in prod" :key="product.id">
           <router-link :to="{ name: 'Product', params: { id: product.id } }" class="product-link">
             <div class="imgProcuct">
@@ -72,11 +72,14 @@ export default {
 
 <style scoped>
 .showcase {
+  min-height: 566px;
   margin: 50px auto;
 }
+
 .showcase .title {
   margin: 50px 0;
 }
+
 .cardProduct {
   margin-bottom: 30px;
   padding: 15px;
@@ -131,6 +134,7 @@ export default {
   text-decoration: none;
   color: inherit;
 }
+
 @media (max-width: 1023px) {
   .showcase {
     margin: 15px auto;

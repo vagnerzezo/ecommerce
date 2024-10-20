@@ -65,6 +65,7 @@ export default {
 
 <style scoped>
 .showcase {
+  min-height: 566px;
   margin: 50px auto;
 }
 

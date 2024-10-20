@@ -11,7 +11,7 @@
          <img srcset="
           @/assets/img/banner/fullbanner.webp 800w
         " sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1900px"
-            src="@/assets/img/banner/fullbanner.webp" alt="fullbanner" loading="lazy" width="1900" height="auto" />
+            src="@/assets/img/banner/fullbanner.webp" alt="fullbanner" loading="lazy" width="1903" height="750" />
       </div>
    </div>
 </template>
@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style scoped>
+.fullbanner {
+   min-height: 539px;
+}
+
 .fullbanner img {
    width: 100%;
    height: auto;
