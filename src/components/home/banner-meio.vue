@@ -26,4 +26,10 @@ export default {
    width: 100%;
    height: auto;
 }
+
+@media (max-width:1023px) {
+   .bannerMeio {
+      min-height: 234px;
+   }
+}
 </style>
